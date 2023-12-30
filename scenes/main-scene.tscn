@@ -2,13 +2,13 @@
 
 [ext_resource path="res://scripts/bg-endless-scrolling.gd" type="Script" id=1]
 [ext_resource path="res://art/mockup-1-assets/First bg.PNG" type="Texture" id=2]
-[ext_resource path="res://scenes/enna.tscn" type="PackedScene" id=3]
-[ext_resource path="res://scenes/burrito.tscn" type="PackedScene" id=4]
+[ext_resource path="res://sprites/enna.tscn" type="PackedScene" id=3]
+[ext_resource path="res://sprites/burrito.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 830.75, 41.375 )
 
-[node name="Mockup-1" type="Node2D"]
+[node name="main-scene" type="Node2D"]
 __meta__ = {
 "_edit_horizontal_guides_": [  ],
 "_edit_vertical_guides_": [ 3264.0 ]
@@ -37,5 +37,5 @@ position = Vector2( 152, 306 )
 position = Vector2( 655, 578.375 )
 shape = SubResource( 1 )
 
-[node name="Burrito" parent="." instance=ExtResource( 4 )]
+[node name="burrito" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1700, 700 )

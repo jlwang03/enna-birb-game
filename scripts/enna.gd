@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends PhysicsBody2D
 
 enum State {
 	RUNNING,
@@ -7,48 +7,60 @@ enum State {
 }
 
 var current_state = State.RUNNING
-var time_in_state = 0.0
+var is_animation_finished = false
 
-# Called when the node enters the scene tree for the first time.
+
 func _ready():
 	_enna_run()
 
-func _physics_process(delta: float):
-	time_in_state += delta
-	
+func _process(delta: float):
 	match current_state:
 		State.RUNNING:
-			if Input.is_action_pressed("ui_up"):
+			if Input.is_action_just_pressed("ui_up"):
 				_enna_jump()
-			elif Input.is_action_pressed("ui_down"):
+			elif Input.is_action_just_pressed("ui_down"):
 				_enna_dive()
 			pass
 		State.JUMP:
-			if time_in_state > 0.8:
+			if is_animation_finished:
 				_enna_run()
 			pass
 		State.DIVE:
-			if time_in_state > 0.5 and not Input.is_action_pressed("ui_down"):
-				_enna_run()
+			if is_animation_finished:
+				if not Input.is_action_pressed("ui_down"):
+					_enna_run()
+				else:
+					_enna_slide()
 			pass
+
+func _on_AnimationPlayer_animation_finished(anim_name):
+	is_animation_finished = true		
 	
+
 func _enna_run() -> void:
 	current_state = State.RUNNING
-	time_in_state = 0.0
+	is_animation_finished = false
 	
 	$AnimationPlayer.stop()
 	$AnimationPlayer.play("run")
 
 func _enna_jump() -> void:
 	current_state = State.JUMP
-	time_in_state = 0.0
+	is_animation_finished = false
 	
 	$AnimationPlayer.stop()
 	$AnimationPlayer.play("jump")
 
 func _enna_dive() -> void:
 	current_state = State.DIVE
-	time_in_state = 0.0
+	is_animation_finished = false
 	
 	$AnimationPlayer.stop()
 	$AnimationPlayer.play("dive")
+
+func _enna_slide() -> void:
+	if not $AnimationPlayer.is_playing():
+		$AnimationPlayer.play("dive")
+
+func CollectBurrito() -> void:
+	print("burrito")
