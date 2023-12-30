@@ -1,9 +1,9 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://art/mockup-1-assets/Burritos.PNG" type="Texture" id=1]
-[ext_resource path="res://scripts/burrito.gd" type="Script" id=2]
+[ext_resource path="res://scripts/health-object.gd" type="Script" id=2]
 
-[node name="burrito" type="StaticBody2D"]
+[node name="burrito" type="KinematicBody2D"]
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]

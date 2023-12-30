@@ -61,6 +61,3 @@ func _enna_dive() -> void:
 func _enna_slide() -> void:
 	if not $AnimationPlayer.is_playing():
 		$AnimationPlayer.play("dive")
-
-func CollectBurrito() -> void:
-	print("burrito")

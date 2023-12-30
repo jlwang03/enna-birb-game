@@ -1,7 +1,7 @@
 extends Sprite
 
 
-const VELOCITY: float = -500.0
+const SPEED: float = -500.0
 var texture_width: float = 0
 
 
@@ -12,7 +12,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	position.x += VELOCITY * delta
+	position.x += SPEED * delta
 	_attempt_reposition()
 
 func _attempt_reposition() -> void:

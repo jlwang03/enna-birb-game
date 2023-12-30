@@ -138,18 +138,6 @@ tracks/1/keys = {
 "update": 0,
 "values": [ "dive" ]
 }
-tracks/2/type = "value"
-tracks/2/path = NodePath("CollisionShape2D:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 0.167706, 0.336692 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0, 137 ), Vector2( 0, 193 ), Vector2( 0, 226 ) ]
-}
 
 [sub_resource type="Animation" id=46]
 length = 0.8
@@ -176,18 +164,6 @@ tracks/1/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ "jump" ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("CollisionShape2D:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0, 145 ), Vector2( 0, 145 ), Vector2( 0, 207 ), Vector2( 0, -29 ), Vector2( 0, -75 ), Vector2( 0, -22 ), Vector2( 0, 211 ), Vector2( 0, 144 ) ]
 }
 
 [sub_resource type="Animation" id=37]
@@ -217,23 +193,11 @@ tracks/1/keys = {
 "update": 0,
 "values": [ "run" ]
 }
-tracks/2/type = "value"
-tracks/2/path = NodePath("CollisionShape2D:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0.0012802 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, 143 ) ]
-}
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 128.5, 184 )
 
-[node name="enna" type="KinematicBody2D"]
+[node name="enna" type="StaticBody2D"]
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
