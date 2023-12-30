@@ -64,7 +64,7 @@ func _enna_dive() -> void:
 
 func _enna_slide() -> void:
 	if not $AnimationPlayer.is_playing():
-		$AnimationPlayer.play("dive")
+		$AnimationPlayer.play("slide")
 
 func _on_AnimationPlayer_animation_finished(anim_name):
 	is_animation_finished = true

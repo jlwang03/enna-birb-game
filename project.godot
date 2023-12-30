@@ -66,7 +66,7 @@ version_control_plugin_name="GitAPI"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/AS2P/plugin.cfg", "res://addons/SpritesheetGenerator/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/AS2P/plugin.cfg" )
 
 [gui]
 
