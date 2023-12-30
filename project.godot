@@ -9,6 +9,16 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "PhysicsBody2D",
+"class": "Enna",
+"language": "GDScript",
+"path": "res://scripts/enna.gd"
+}, {
+"base": "Node2D",
+"class": "GameManager",
+"language": "GDScript",
+"path": "res://scripts/game-manager.gd"
+}, {
 "base": "",
 "class": "GitAPI",
 "language": "NativeScript",
@@ -23,11 +33,19 @@ _global_script_classes=[ {
 "class": "MovingObject",
 "language": "GDScript",
 "path": "res://scripts/moving-object.gd"
+}, {
+"base": "MovingObject",
+"class": "ObstacleObject",
+"language": "GDScript",
+"path": "res://scripts/obstacle-object.gd"
 } ]
 _global_script_class_icons={
+"Enna": "",
+"GameManager": "",
 "GitAPI": "",
 "HealthObject": "",
-"MovingObject": ""
+"MovingObject": "",
+"ObstacleObject": ""
 }
 
 [application]

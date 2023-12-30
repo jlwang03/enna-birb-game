@@ -2,12 +2,16 @@ extends KinematicBody2D
 
 class_name MovingObject
 
-const START_POS: Vector2 = Vector2(1600.0, 700.0)
-const SPEED: float = -5.0
+var _start_pos: Vector2
+var _velocity: Vector2
+
+func _init(start_y: float = 700.0, speed: float = -5):
+	_start_pos = Vector2(1600.0, start_y)
+	_velocity = Vector2(speed, 0)
 
 func _ready():
 	# Set initial position
-	position = START_POS
+	position = _start_pos
 
 func _process(delta: float) -> void:
 	# Hide object once it reaches the edge of the frame
@@ -16,7 +20,7 @@ func _process(delta: float) -> void:
 
 func _physics_process(delta):
 	# Check for collisions
-	var collision_info = move_and_collide(Vector2(SPEED,0))
+	var collision_info = move_and_collide(_velocity)
 	if collision_info:
 		collide_with_player()
 		

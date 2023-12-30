@@ -1,14 +1,20 @@
 extends PhysicsBody2D
 
+class_name Enna
+
 enum State {
 	RUNNING,
 	JUMP,
 	DIVE
 }
 
-var current_state = State.RUNNING
-var is_animation_finished = false
+var health: int
+var current_state
+var is_animation_finished: bool
 
+func _init():
+	current_state = State.RUNNING
+	is_animation_finished = false
 
 func _ready():
 	_enna_run()
@@ -33,10 +39,8 @@ func _process(delta: float):
 					_enna_slide()
 			pass
 
-func _on_AnimationPlayer_animation_finished(anim_name):
-	is_animation_finished = true		
-	
 
+# Functions related to state and animations
 func _enna_run() -> void:
 	current_state = State.RUNNING
 	is_animation_finished = false
@@ -61,3 +65,6 @@ func _enna_dive() -> void:
 func _enna_slide() -> void:
 	if not $AnimationPlayer.is_playing():
 		$AnimationPlayer.play("dive")
+
+func _on_AnimationPlayer_animation_finished(anim_name):
+	is_animation_finished = true
