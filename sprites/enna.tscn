@@ -241,14 +241,15 @@ tracks/1/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 128.5, 184 )
+extents = Vector2( 234.5, 232.5 )
 
 [node name="enna" type="StaticBody2D"]
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 16 )
-animation = "run"
+animation = "jump"
+frame = 7
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/dive = SubResource( 68 )
@@ -257,7 +258,7 @@ anims/run = SubResource( 70 )
 anims/slide = SubResource( 71 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 137 )
+position = Vector2( -3.5, 88.5 )
 shape = SubResource( 2 )
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

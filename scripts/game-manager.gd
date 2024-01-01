@@ -1,7 +1,5 @@
 extends Node2D
 
-class_name GameManager
-
 const SPEED_MULTIPLIER: float = 1.0
 const SCORE_INCREASE_COOLDOWN: float = 1.0
 
@@ -39,5 +37,4 @@ func DecreaseHealth():
 func IncreaseHealth():
 	if _health < 3:
 		_health += 1
-	print("Increase health")
 	

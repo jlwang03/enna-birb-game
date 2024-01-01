@@ -1,6 +1,6 @@
 extends ParallaxBackground
 
-const SPEED: float = 5.0
+const SPEED: float = 6.0
 const SCROLLING_MULTIPLIER: float = 100.0
 
 func _process(delta):

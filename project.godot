@@ -14,11 +14,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://scripts/enna.gd"
 }, {
-"base": "Node2D",
-"class": "GameManager",
-"language": "GDScript",
-"path": "res://scripts/game-manager.gd"
-}, {
 "base": "",
 "class": "GitAPI",
 "language": "NativeScript",
@@ -41,7 +36,6 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "Enna": "",
-"GameManager": "",
 "GitAPI": "",
 "HealthObject": "",
 "MovingObject": "",
@@ -53,6 +47,10 @@ _global_script_class_icons={
 config/name="enna-birb-game"
 run/main_scene="res://scenes/main-scene.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+GameManager="*res://scripts/game-manager.gd"
 
 [display]
 
