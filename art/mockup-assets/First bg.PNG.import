@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Taco.PNG-0c632275b454f2b26038d7d5ce273dfa.stex"
+path="res://.import/First bg.PNG-f6df44548fe5c6866b16fbc2e605385c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/mockup-1-assets/Taco.PNG"
-dest_files=[ "res://.import/Taco.PNG-0c632275b454f2b26038d7d5ce273dfa.stex" ]
+source_file="res://art/mockup-assets/First bg.PNG"
+dest_files=[ "res://.import/First bg.PNG-f6df44548fe5c6866b16fbc2e605385c.stex" ]
 
 [params]
 

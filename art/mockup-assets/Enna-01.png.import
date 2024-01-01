@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Enna-01.png-321ab2fa49ffcfed2ecb380b0cfaceac.stex"
+path="res://.import/Enna-01.png-a6dbf8e2acb17ce0a4593cdc2cee9272.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/mockup-1-assets/Enna-01.png"
-dest_files=[ "res://.import/Enna-01.png-321ab2fa49ffcfed2ecb380b0cfaceac.stex" ]
+source_file="res://art/mockup-assets/Enna-01.png"
+dest_files=[ "res://.import/Enna-01.png-a6dbf8e2acb17ce0a4593cdc2cee9272.stex" ]
 
 [params]
 

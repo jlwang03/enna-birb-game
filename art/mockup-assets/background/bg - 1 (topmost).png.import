@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bg - 3.png-5ef1a5396bad25516940f78aeebbd373.stex"
+path="res://.import/bg - 1 (topmost).png-9780ed6be95736672ffb449ab2173825.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/mockup-1-assets/background/bg - 3.png"
-dest_files=[ "res://.import/bg - 3.png-5ef1a5396bad25516940f78aeebbd373.stex" ]
+source_file="res://art/mockup-assets/background/bg - 1 (topmost).png"
+dest_files=[ "res://.import/bg - 1 (topmost).png-9780ed6be95736672ffb449ab2173825.stex" ]
 
 [params]
 

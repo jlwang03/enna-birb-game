@@ -6,7 +6,7 @@ var _start_pos: Vector2
 var _velocity: Vector2
 var _has_collided: bool
 
-func _init(start_y: float = 410.0, speed: float = 5):
+func _init(start_y: float = 410.0, speed: float = 9):
 	_start_pos = Vector2(1100.0, start_y)
 	_velocity = Vector2(speed * (-1), 0)
 	_has_collided = false

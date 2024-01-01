@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/SS-04.PNG-a4e10e59cc06b0fa4dde2e66dc571a51.stex"
+path="res://.import/Placeholder-start.PNG-5d1bb5ae2dd10e5570b3d37d207c3090.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/mockup-1-assets/SS-04.PNG"
-dest_files=[ "res://.import/SS-04.PNG-a4e10e59cc06b0fa4dde2e66dc571a51.stex" ]
+source_file="res://art/mockup-assets/start screen/Placeholder-start.PNG"
+dest_files=[ "res://.import/Placeholder-start.PNG-5d1bb5ae2dd10e5570b3d37d207c3090.stex" ]
 
 [params]
 

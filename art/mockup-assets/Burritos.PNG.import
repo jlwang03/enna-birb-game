@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/SS-05.PNG-c59dd7e805ecd059f79097c8541c36f5.stex"
+path="res://.import/Burritos.PNG-7bebc4a211d8f8c25700b5d2ebf1c87c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/mockup-1-assets/SS-05.PNG"
-dest_files=[ "res://.import/SS-05.PNG-c59dd7e805ecd059f79097c8541c36f5.stex" ]
+source_file="res://art/mockup-assets/Burritos.PNG"
+dest_files=[ "res://.import/Burritos.PNG-7bebc4a211d8f8c25700b5d2ebf1c87c.stex" ]
 
 [params]
 

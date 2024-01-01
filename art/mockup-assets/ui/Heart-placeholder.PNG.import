@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bg - 8.png-60a99209f6419807d5ee534c82ab9d00.stex"
+path="res://.import/Heart-placeholder.PNG-a054638cb89def83f599f9fb2f10c339.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/mockup-1-assets/background/bg - 8.png"
-dest_files=[ "res://.import/bg - 8.png-60a99209f6419807d5ee534c82ab9d00.stex" ]
+source_file="res://art/mockup-assets/ui/Heart-placeholder.PNG"
+dest_files=[ "res://.import/Heart-placeholder.PNG-a054638cb89def83f599f9fb2f10c339.stex" ]
 
 [params]
 
