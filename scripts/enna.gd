@@ -17,52 +17,52 @@ func _init():
 	is_animation_finished = false
 
 func _ready():
-	_enna_run()
+	enna_run()
 
 func _process(delta: float):
 	match current_state:
 		State.RUNNING:
 			if Input.is_action_just_pressed("ui_up"):
-				_enna_jump()
+				enna_jump()
 			elif Input.is_action_just_pressed("ui_down"):
-				_enna_dive()
+				enna_dive()
 			pass
 		State.JUMP:
 			if is_animation_finished:
-				_enna_run()
+				enna_run()
 			pass
 		State.DIVE:
 			if is_animation_finished:
 				if not Input.is_action_pressed("ui_down"):
-					_enna_run()
+					enna_run()
 				else:
-					_enna_slide()
+					enna_slide()
 			pass
 
 
 # Functions related to state and animations
-func _enna_run() -> void:
+func enna_run() -> void:
 	current_state = State.RUNNING
 	is_animation_finished = false
 	
 	$AnimationPlayer.stop()
 	$AnimationPlayer.play("run")
 
-func _enna_jump() -> void:
+func enna_jump() -> void:
 	current_state = State.JUMP
 	is_animation_finished = false
 	
 	$AnimationPlayer.stop()
 	$AnimationPlayer.play("jump")
 
-func _enna_dive() -> void:
+func enna_dive() -> void:
 	current_state = State.DIVE
 	is_animation_finished = false
 	
 	$AnimationPlayer.stop()
 	$AnimationPlayer.play("dive")
 
-func _enna_slide() -> void:
+func enna_slide() -> void:
 	if not $AnimationPlayer.is_playing():
 		$AnimationPlayer.play("slide")
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://scripts/bg-endless-scrolling.gd" type="Script" id=1]
 [ext_resource path="res://art/mockup-assets/background/bg - 3.png" type="Texture" id=2]
@@ -12,20 +12,80 @@
 [ext_resource path="res://art/mockup-assets/background/bg - 2.png" type="Texture" id=10]
 [ext_resource path="res://art/mockup-assets/background/bg - 1 (topmost).png" type="Texture" id=11]
 [ext_resource path="res://art/mockup-assets/background/bg - 8.png" type="Texture" id=12]
+[ext_resource path="res://art/mockup-assets/ui/Pause-placeholder.PNG" type="Texture" id=13]
+[ext_resource path="res://art/mockup-assets/ui/Heart-placeholder.PNG" type="Texture" id=14]
+[ext_resource path="res://art/final-assets/FlyingBird-Yz9Ga.otf" type="DynamicFontData" id=16]
 
-[node name="main-scene" type="Node2D"]
+[sub_resource type="DynamicFont" id=1]
+size = 50
+font_data = ExtResource( 16 )
+
+[node name="MainScene" type="Node2D"]
 script = ExtResource( 5 )
 __meta__ = {
 "_edit_horizontal_guides_": [  ],
 "_edit_vertical_guides_": [ 3264.0 ]
 }
 
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+
 [node name="HUD" type="Control" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
 
+[node name="Pause" type="TextureRect" parent="HUD"]
+margin_left = 825.0
+margin_top = -535.0
+margin_right = 2873.0
+margin_bottom = 1513.0
+rect_scale = Vector2( 0.06, 0.06 )
+texture = ExtResource( 13 )
+stretch_mode = 1
+
+[node name="Hearts" type="Control" parent="HUD"]
+margin_left = -950.0
+margin_top = -535.0
+margin_right = -910.0
+margin_bottom = -495.0
+
+[node name="heart1" type="TextureRect" parent="HUD/Hearts"]
+margin_top = -3.0
+margin_right = 2048.0
+margin_bottom = 2045.0
+rect_scale = Vector2( 0.06, 0.06 )
+texture = ExtResource( 14 )
+stretch_mode = 1
+
+[node name="heart2" type="TextureRect" parent="HUD/Hearts"]
+margin_left = 100.0
+margin_top = -3.0
+margin_right = 2148.0
+margin_bottom = 2045.0
+rect_scale = Vector2( 0.06, 0.06 )
+texture = ExtResource( 14 )
+stretch_mode = 1
+
+[node name="heart3" type="TextureRect" parent="HUD/Hearts"]
+margin_left = 200.0
+margin_top = -3.0
+margin_right = 2248.0
+margin_bottom = 2045.0
+rect_scale = Vector2( 0.06, 0.06 )
+texture = ExtResource( 14 )
+stretch_mode = 1
+
+[node name="Label" type="Label" parent="HUD"]
+margin_left = -926.0
+margin_top = -425.0
+margin_right = -718.0
+margin_bottom = -375.0
+custom_fonts/font = SubResource( 1 )
+text = "Score: 999"
+
 [node name="Menu" type="Control" parent="."]
-margin_right = 40.0
+margin_left = -1.0
+margin_right = 39.0
 margin_bottom = 40.0
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
@@ -77,6 +137,7 @@ motion_mirroring = Vector2( 7200, 0 )
 texture = ExtResource( 2 )
 
 [node name="bg 2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 1.2, 1 )
 motion_mirroring = Vector2( 7200, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/bg 2"]
@@ -89,12 +150,9 @@ motion_mirroring = Vector2( 7200, 0 )
 texture = ExtResource( 11 )
 region_rect = Rect2( 0, 0, 1920, 1080 )
 
-[node name="Camera2D" type="Camera2D" parent="."]
-current = true
-
 [node name="Enna" parent="." instance=ExtResource( 3 )]
 position = Vector2( -500, 175 )
 
 [node name="burrito" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1100, 410 )
-scale = Vector2( 0.25, 0.25 )
+position = Vector2( 1100, 425 )
+scale = Vector2( 0.33, 0.33 )
