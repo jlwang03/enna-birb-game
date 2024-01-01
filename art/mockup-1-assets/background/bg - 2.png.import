@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/really bottom.PNG-d225ead7815420b6a747f2e5ac102e2a.stex"
+path="res://.import/bg - 2.png-cfce8a3a72a230904f6bc6a725672afe.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/mockup-1-assets/background/really bottom.PNG"
-dest_files=[ "res://.import/really bottom.PNG-d225ead7815420b6a747f2e5ac102e2a.stex" ]
+source_file="res://art/mockup-1-assets/background/bg - 2.png"
+dest_files=[ "res://.import/bg - 2.png-cfce8a3a72a230904f6bc6a725672afe.stex" ]
 
 [params]
 

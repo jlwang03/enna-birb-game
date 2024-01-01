@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/alouzilla (btwn 4 _ 5).png-cb2c82c4d45defb25657f89a2d1fa1ec.stex"
+path="res://.import/bg - 3.png-5ef1a5396bad25516940f78aeebbd373.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/mockup-1-assets/background/alouzilla (btwn 4 _ 5).png"
-dest_files=[ "res://.import/alouzilla (btwn 4 _ 5).png-cb2c82c4d45defb25657f89a2d1fa1ec.stex" ]
+source_file="res://art/mockup-1-assets/background/bg - 3.png"
+dest_files=[ "res://.import/bg - 3.png-5ef1a5396bad25516940f78aeebbd373.stex" ]
 
 [params]
 
