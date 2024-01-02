@@ -155,4 +155,3 @@ position = Vector2( -500, 175 )
 
 [node name="burrito" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1100, 425 )
-scale = Vector2( 0.33, 0.33 )
