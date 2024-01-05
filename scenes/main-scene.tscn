@@ -36,14 +36,15 @@ current = true
 margin_right = 40.0
 margin_bottom = 40.0
 
-[node name="Pause" type="TextureRect" parent="HUD"]
+[node name="Pause" type="TextureButton" parent="HUD"]
 margin_left = 825.0
 margin_top = -535.0
 margin_right = 2873.0
 margin_bottom = 1513.0
 rect_scale = Vector2( 0.06, 0.06 )
-texture = ExtResource( 13 )
-stretch_mode = 1
+texture_normal = ExtResource( 13 )
+texture_pressed = ExtResource( 13 )
+texture_hover = ExtResource( 13 )
 
 [node name="Hearts" type="Control" parent="HUD"]
 margin_left = -950.0
@@ -164,3 +165,5 @@ position = Vector2( 1100, 25 )
 
 [node name="pigeon-static" parent="." instance=ExtResource( 17 )]
 position = Vector2( 3500, 378 )
+
+[connection signal="pressed" from="HUD/Pause" to="." method="_on_Pause_pressed"]
