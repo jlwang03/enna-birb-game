@@ -45,7 +45,7 @@ _global_script_class_icons={
 [application]
 
 config/name="enna-birb-game"
-run/main_scene="res://scenes/main-scene.tscn"
+run/main_scene="res://scenes/start-scene.tscn"
 config/icon="res://icon.png"
 
 [display]
