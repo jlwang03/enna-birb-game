@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://art/final-assets/SS-final.PNG" type="Texture" id=1]
 [ext_resource path="res://scripts/enna.gd" type="Script" id=2]
@@ -131,6 +131,15 @@ animations = [ {
 "speed": 12.0
 } ]
 
+[sub_resource type="RectangleShape2D" id=72]
+extents = Vector2( 175, 230 )
+
+[sub_resource type="RectangleShape2D" id=74]
+extents = Vector2( 150, 220 )
+
+[sub_resource type="RectangleShape2D" id=75]
+extents = Vector2( 275, 175 )
+
 [sub_resource type="Animation" id=68]
 length = 0.5
 tracks/0/type = "value"
@@ -157,9 +166,37 @@ tracks/1/keys = {
 "update": 0,
 "values": [ "dive" ]
 }
+tracks/2/type = "value"
+tracks/2/path = NodePath("CollisionShape2D:shape")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ SubResource( 72 ), SubResource( 74 ), SubResource( 75 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( -70, 90 ), Vector2( -70, 125 ), Vector2( -70, 150 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=77]
+extents = Vector2( 200, 200 )
 
 [sub_resource type="Animation" id=69]
 length = 0.8
+step = 0.05
 tracks/0/type = "value"
 tracks/0/path = NodePath("AnimatedSprite:frame")
 tracks/0/interp = 1
@@ -185,17 +222,32 @@ tracks/1/keys = {
 "values": [ "jump" ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("AnimatedSprite:position")
+tracks/2/path = NodePath("CollisionShape2D:shape")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.2, 0.5, 0.7 ),
+"times": PoolRealArray( 0, 0.2, 0.3, 0.8 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, -200 ), Vector2( 0, 0 ) ]
+"update": 1,
+"values": [ SubResource( 72 ), SubResource( 77 ), SubResource( 72 ), SubResource( 72 ) ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.2, 0.3, 0.5, 0.6, 0.7, 0.8, 1.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( -70, 90 ), Vector2( -50, 110 ), Vector2( -25, 0 ), Vector2( -10, -75 ), Vector2( -10, -35 ), Vector2( -10, 150 ), Vector2( -70, 90 ), Vector2( -10, 200 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=73]
+extents = Vector2( 200, 230 )
 
 [sub_resource type="Animation" id=70]
 length = 0.416667
@@ -224,6 +276,33 @@ tracks/1/keys = {
 "update": 0,
 "values": [ "run" ]
 }
+tracks/2/type = "value"
+tracks/2/path = NodePath("CollisionShape2D:shape")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ SubResource( 73 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -70, 90 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=76]
+extents = Vector2( 275, 175 )
 
 [sub_resource type="Animation" id=71]
 length = 0.166667
@@ -234,10 +313,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.0833333 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.0832884, 0.0833333 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ 0, 1 ]
+"values": [ 0, 1, 1 ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("AnimatedSprite:animation")
@@ -251,16 +330,38 @@ tracks/1/keys = {
 "update": 0,
 "values": [ "slide" ]
 }
-
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 234.5, 232.5 )
+tracks/2/type = "value"
+tracks/2/path = NodePath("CollisionShape2D:shape")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ SubResource( 76 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -70, 150 ) ]
+}
 
 [node name="enna" type="StaticBody2D"]
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 16 )
-animation = "dive"
+animation = "jump"
+frame = 3
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/dive = SubResource( 68 )
@@ -269,7 +370,7 @@ anims/run = SubResource( 70 )
 anims/slide = SubResource( 71 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -3.5, 88.5 )
-shape = SubResource( 2 )
+position = Vector2( -25, 0 )
+shape = SubResource( 72 )
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
