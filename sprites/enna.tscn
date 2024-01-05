@@ -132,13 +132,13 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=72]
-extents = Vector2( 175, 230 )
+extents = Vector2( 125, 230 )
 
 [sub_resource type="RectangleShape2D" id=74]
-extents = Vector2( 150, 220 )
+extents = Vector2( 150, 200 )
 
 [sub_resource type="RectangleShape2D" id=75]
-extents = Vector2( 275, 175 )
+extents = Vector2( 200, 150 )
 
 [sub_resource type="Animation" id=68]
 length = 0.5
@@ -188,15 +188,15 @@ tracks/3/keys = {
 "times": PoolRealArray( 0, 0.3, 0.4 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
-"values": [ Vector2( -70, 90 ), Vector2( -70, 125 ), Vector2( -70, 150 ) ]
+"values": [ Vector2( -70, 90 ), Vector2( 0, 125 ), Vector2( 0, 150 ) ]
 }
 
 [sub_resource type="RectangleShape2D" id=77]
-extents = Vector2( 200, 200 )
+extents = Vector2( 150, 200 )
 
 [sub_resource type="Animation" id=69]
-length = 0.8
-step = 0.05
+length = 0.95
+step = 0.01
 tracks/0/type = "value"
 tracks/0/path = NodePath("AnimatedSprite:frame")
 tracks/0/interp = 1
@@ -204,7 +204,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.5, 0.6, 0.7, 0.8 ),
+"times": PoolRealArray( 0, 0.07, 0.14, 0.21, 0.45, 0.6, 0.8, 0.9 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ 0, 1, 2, 3, 4, 5, 6, 7 ]
@@ -228,7 +228,7 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.2, 0.3, 0.8 ),
+"times": PoolRealArray( 0, 0.14, 0.21, 0.9 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
 "values": [ SubResource( 72 ), SubResource( 77 ), SubResource( 72 ), SubResource( 72 ) ]
@@ -240,10 +240,10 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.2, 0.3, 0.35, 0.4, 0.45, 0.5, 0.6, 0.65, 0.7, 0.8, 1.4 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.14, 0.21, 0.3, 0.35, 0.4, 0.46, 0.61, 0.7, 0.75, 0.81, 0.9, 1.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ Vector2( -70, 90 ), Vector2( -50, 110 ), Vector2( -25, -50 ), Vector2( -25, -75 ), Vector2( -25, -100 ), Vector2( -25, -125 ), Vector2( -10, -250 ), Vector2( -10, -150 ), Vector2( -10, -75 ), Vector2( -10, 150 ), Vector2( -70, 90 ), Vector2( -10, 200 ) ]
+"values": [ Vector2( -70, 90 ), Vector2( -50, 110 ), Vector2( -25, -75 ), Vector2( -25, -150 ), Vector2( -25, -175 ), Vector2( -25, -200 ), Vector2( -10, -250 ), Vector2( -10, -125 ), Vector2( -10, -100 ), Vector2( -10, -75 ), Vector2( -10, 150 ), Vector2( -70, 90 ), Vector2( -10, 200 ) ]
 }
 tracks/4/type = "value"
 tracks/4/path = NodePath("AnimatedSprite:position")
@@ -252,14 +252,14 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 0.2, 0.55, 0.7, 0.8 ),
+"times": PoolRealArray( 0, 0.18, 0.46, 0.81, 0.9 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, -200 ), Vector2( 0, 0 ), Vector2( 0, 0 ) ]
 }
 
 [sub_resource type="RectangleShape2D" id=73]
-extents = Vector2( 200, 230 )
+extents = Vector2( 100, 230 )
 
 [sub_resource type="Animation" id=70]
 length = 0.416667
@@ -310,11 +310,11 @@ tracks/3/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( -70, 90 ) ]
+"values": [ Vector2( 0, 90 ) ]
 }
 
 [sub_resource type="RectangleShape2D" id=76]
-extents = Vector2( 275, 175 )
+extents = Vector2( 200, 150 )
 
 [sub_resource type="Animation" id=71]
 length = 0.166667
@@ -364,7 +364,7 @@ tracks/3/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( -70, 150 ) ]
+"values": [ Vector2( 0, 150 ) ]
 }
 
 [node name="enna" type="StaticBody2D"]
@@ -373,7 +373,7 @@ script = ExtResource( 2 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 16 )
 animation = "jump"
-frame = 7
+frame = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/dive = SubResource( 68 )
@@ -382,7 +382,7 @@ anims/run = SubResource( 70 )
 anims/slide = SubResource( 71 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -70, 90 )
-shape = SubResource( 72 )
+position = Vector2( -50, 110 )
+shape = SubResource( 77 )
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

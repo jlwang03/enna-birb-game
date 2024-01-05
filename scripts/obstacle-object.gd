@@ -3,5 +3,5 @@ extends MovingObject
 class_name ObstacleObject
 
 func collide_with_player():
-	_gameManager.IncreaseHealth()
-	pass
+	_gameManager.DecreaseHealth()
+	DestroyObject()
