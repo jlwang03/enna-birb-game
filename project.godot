@@ -48,6 +48,10 @@ config/name="enna-birb-game"
 run/main_scene="res://scenes/start-scene.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Global="*res://scripts/global.gd"
+
 [display]
 
 window/size/width=1920

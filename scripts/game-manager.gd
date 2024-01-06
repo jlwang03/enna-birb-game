@@ -2,7 +2,7 @@ extends Node2D
 
 
 const SPEED_MULTIPLIER: float = 1.0
-const SCORE_INCREASE_COOLDOWN: float = 0.1
+const SCORE_INCREASE_COOLDOWN: float = 0.0
 
 onready var _ui_pause
 onready var _ui_hearts
