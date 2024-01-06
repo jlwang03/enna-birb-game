@@ -8,9 +8,9 @@ func _ready():
 func _on_start_pressed():
 	Global.StartGame()
 
-func _on_leaderboard_pressed():
+func _on_tutorial_pressed():
 	pass # Replace with function body.
 
 
-func _on_credits_pressed():
+func _on_quit_pressed():
 	pass # Replace with function body.

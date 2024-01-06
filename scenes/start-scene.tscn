@@ -221,6 +221,6 @@ autoplay = "default"
 anims/default = SubResource( 24 )
 
 [connection signal="pressed" from="start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="tutorial" to="." method="_on_leaderboard_pressed"]
+[connection signal="pressed" from="tutorial" to="." method="_on_tutorial_pressed"]
 [connection signal="pressed" from="credits" to="." method="_on_credits_pressed"]
-[connection signal="pressed" from="quit" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
