@@ -2,7 +2,7 @@ extends Node
 
 var _highestScore
 var _inGame: bool
-
+var _playerColliderID: int
 
 func _init():
 	_highestScore = 0

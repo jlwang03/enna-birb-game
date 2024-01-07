@@ -1,7 +1,7 @@
 extends Node2D
 
 
-const SPEED_MULTIPLIER: float = 1.0
+const SPEED_MULTIPLIER: float = 0.25
 const SCORE_INCREASE_COOLDOWN: float = 0.0
 
 onready var _ui_pause
@@ -11,14 +11,17 @@ onready var _ui_score
 var _score
 var _health
 var _speed
+
 onready var _spawner
+onready var _bg
+onready var _enna_ID
 
 var _score_delta_time
 
 func _init():
 	_score = 0
 	_health = 2
-	_speed = 5.0
+	_speed = 6.0
 	_score_delta_time = 0
 
 func _ready():
@@ -28,6 +31,9 @@ func _ready():
 	update_hearts_ui()
 	
 	_spawner = $Spawner
+	_bg = $ParallaxBackground
+	_bg.SetSpeed(_speed)
+	_enna_ID = $Enna.get_instance_id()
 	
 func _process(delta: float):
 	# Increase score
@@ -39,7 +45,7 @@ func _process(delta: float):
 	
 	# Update scrolling speed
 	_speed += (delta * SPEED_MULTIPLIER)
-	# TBD: Update background scrolling speeds
+	_bg.SetSpeed(_speed)
 
 
 func DecreaseHealth():

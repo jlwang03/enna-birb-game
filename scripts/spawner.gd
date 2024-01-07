@@ -8,6 +8,9 @@ export(Array, PackedScene) var health_items
 export(Array, PackedScene) var ground_enemies
 export(Array, PackedScene) var air_enemies
 
+func _ready():
+	randomize()
+
 # Objects that heal the player
 func SpawnHealth(speed):
 	var i = randi() % health_items.size()

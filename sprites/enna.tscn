@@ -372,8 +372,7 @@ script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 16 )
-animation = "jump"
-frame = 2
+animation = "dive"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/dive = SubResource( 68 )
@@ -382,7 +381,7 @@ anims/run = SubResource( 70 )
 anims/slide = SubResource( 71 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -50, 110 )
-shape = SubResource( 77 )
+position = Vector2( -70, 90 )
+shape = SubResource( 72 )
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
