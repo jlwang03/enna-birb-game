@@ -19,6 +19,16 @@ func SpawnHealth(speed):
 	
 	get_parent().add_child(health)
 
+# Large spawn enemy function
+func SpawnEnemy(speed):
+	var enemyType = randi() % 3
+	match enemyType:
+		0:
+			SpawnGroundEnemy(speed)
+		1:
+			SpawnAirEnemy(speed)
+		2:
+			SpawnFlyingEnemy(speed)
 
 # Enemies that need to jump to avoid
 func SpawnGroundEnemy(speed):

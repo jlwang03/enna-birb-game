@@ -29,7 +29,12 @@ func _process(delta: float):
 			pass
 		State.JUMP:
 			if is_animation_finished:
-				enna_run()
+				if Input.is_action_pressed("ui_up"):
+					enna_jump()
+				elif Input.is_action_pressed("ui_down"):
+					enna_dive()
+				else:
+					enna_run()
 			pass
 		State.DIVE:
 			if is_animation_finished:

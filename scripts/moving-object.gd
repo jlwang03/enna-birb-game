@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 class_name MovingObject
 
-const SPEED_MULTIPLIER: float = 2.0
+const SPEED_MULTIPLIER: float = 2.25
 
 onready var _gameManager
 
@@ -29,7 +29,6 @@ func _physics_process(delta):
 	var collision_info = move_and_collide(_velocity)
 	
 	if collision_info and (collision_info.collider_id == _gameManager._enna_ID) and not _has_collided:
-		print("collided")
 		_has_collided = true
 		collide_with_player()
 		
