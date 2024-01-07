@@ -69,7 +69,7 @@ func _process(delta: float):
 func DecreaseHealth():
 	_health -= 1
 	if _health <= 0:
-		print("tbd: Game Over")
+		Global.GameOver(_score)
 	update_hearts_ui()
 	
 func IncreaseHealth():
