@@ -11,21 +11,23 @@ onready var _ui_score
 var _score
 var _health
 var _speed
+onready var _spawner
 
 var _score_delta_time
 
 func _init():
 	_score = 0
 	_health = 2
-	_speed = 500.0
+	_speed = 5.0
 	_score_delta_time = 0
 
 func _ready():
 	_ui_pause = $HUD/Pause
 	_ui_hearts = [$HUD/Hearts/heart1, $HUD/Hearts/heart2, $HUD/Hearts/heart3]
 	_ui_score = $HUD/Score
-	
 	update_hearts_ui()
+	
+	_spawner = $Spawner
 	
 func _process(delta: float):
 	# Increase score

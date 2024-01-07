@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://scripts/bg-endless-scrolling.gd" type="Script" id=1]
 [ext_resource path="res://art/final-assets/background/bg - 8 (bg).png" type="Texture" id=2]
@@ -17,6 +17,12 @@
 [ext_resource path="res://sprites/taco.tscn" type="PackedScene" id=15]
 [ext_resource path="res://art/final-assets/FlyingBird-Yz9Ga.otf" type="DynamicFontData" id=16]
 [ext_resource path="res://sprites/birbs/pigeon-static.tscn" type="PackedScene" id=17]
+[ext_resource path="res://scripts/spawner.gd" type="Script" id=18]
+[ext_resource path="res://sprites/birbs/gull.tscn" type="PackedScene" id=19]
+[ext_resource path="res://sprites/birbs/gull-static.tscn" type="PackedScene" id=20]
+[ext_resource path="res://sprites/birbs/pigeon.tscn" type="PackedScene" id=21]
+[ext_resource path="res://sprites/birbs/crow-static.tscn" type="PackedScene" id=22]
+[ext_resource path="res://sprites/burrito.tscn" type="PackedScene" id=23]
 
 [sub_resource type="DynamicFont" id=1]
 size = 50
@@ -28,6 +34,12 @@ __meta__ = {
 "_edit_horizontal_guides_": [  ],
 "_edit_vertical_guides_": [ 3264.0 ]
 }
+
+[node name="Spawner" type="Node2D" parent="."]
+script = ExtResource( 18 )
+health_items = [ ExtResource( 23 ), ExtResource( 15 ) ]
+ground_enemies = [ ExtResource( 22 ), ExtResource( 20 ), ExtResource( 17 ) ]
+air_enemies = [ ExtResource( 4 ), ExtResource( 19 ), ExtResource( 21 ) ]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
@@ -156,14 +168,5 @@ region_rect = Rect2( 0, 0, 1920, 1080 )
 
 [node name="Enna" parent="." instance=ExtResource( 3 )]
 position = Vector2( -500, 175 )
-
-[node name="taco" parent="." instance=ExtResource( 15 )]
-position = Vector2( 2000, 378 )
-
-[node name="crow" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1100, 25 )
-
-[node name="pigeon-static" parent="." instance=ExtResource( 17 )]
-position = Vector2( 3500, 378 )
 
 [connection signal="pressed" from="HUD/Pause" to="." method="_on_Pause_pressed"]
