@@ -20,17 +20,19 @@ func _ready():
 	position = _start_pos
 
 func _process(delta: float) -> void:
-	# Hide object once it reaches the edge of the frame
-	if (position.x < (_start_pos.x * (-1))):
-		DestroyObject()
+	if Global.IsRunning():
+		# Hide object once it reaches the edge of the frame
+		if (position.x < (_start_pos.x * (-1))):
+			DestroyObject()
 
 func _physics_process(delta):
-	# Check for collisions
-	var collision_info = move_and_collide(_velocity)
-	
-	if collision_info and (collision_info.collider_id == _gameManager._enna_ID) and not _has_collided:
-		_has_collided = true
-		collide_with_player()
+	if Global.IsRunning():
+		# Check for collisions
+		var collision_info = move_and_collide(_velocity)
+		
+		if collision_info and (collision_info.collider_id == _gameManager._enna_ID) and not _has_collided:
+			_has_collided = true
+			collide_with_player()
 		
 func DestroyObject():
 	self.queue_free()

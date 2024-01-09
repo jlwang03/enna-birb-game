@@ -20,29 +20,30 @@ func _ready():
 	enna_run()
 
 func _process(delta: float):
-	match current_state:
-		State.RUNNING:
-			if Input.is_action_just_pressed("ui_up"):
-				enna_jump()
-			elif Input.is_action_just_pressed("ui_down"):
-				enna_dive()
-			pass
-		State.JUMP:
-			if is_animation_finished:
-				if Input.is_action_pressed("ui_up"):
+	if Global.IsRunning():
+		match current_state:
+			State.RUNNING:
+				if Input.is_action_just_pressed("ui_up"):
 					enna_jump()
-				elif Input.is_action_pressed("ui_down"):
+				elif Input.is_action_just_pressed("ui_down"):
 					enna_dive()
-				else:
-					enna_run()
-			pass
-		State.DIVE:
-			if is_animation_finished:
-				if not Input.is_action_pressed("ui_down"):
-					enna_run()
-				else:
-					enna_slide()
-			pass
+				pass
+			State.JUMP:
+				if is_animation_finished:
+					if Input.is_action_pressed("ui_up"):
+						enna_jump()
+					elif Input.is_action_pressed("ui_down"):
+						enna_dive()
+					else:
+						enna_run()
+				pass
+			State.DIVE:
+				if is_animation_finished:
+					if not Input.is_action_pressed("ui_down"):
+						enna_run()
+					else:
+						enna_slide()
+				pass
 
 
 # Functions related to state and animations

@@ -3,6 +3,7 @@ extends Node
 var _highestScore
 var _inGame: bool
 var _playerColliderID: int
+var _isRunning: bool # Is false when the player pauses the game
 
 func _init():
 	_highestScore = 0
@@ -11,6 +12,7 @@ func _init():
 	
 func StartGame():
 	_inGame = true
+	_isRunning = true
 	
 	# Load game screen
 	get_tree().change_scene("res://scenes/main-scene.tscn")
@@ -29,3 +31,11 @@ func GameOver(score):
 
 func GetHighscore() -> int:
 	return _highestScore
+
+
+func IsRunning() -> bool:
+	return _inGame and _isRunning
+
+
+func SetIsRunning(running: bool):
+	_isRunning = running

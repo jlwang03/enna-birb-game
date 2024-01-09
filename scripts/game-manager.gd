@@ -32,7 +32,7 @@ func _init():
 	_health_delta_time = HEALTH_SPAWN_COOLDOWN
 
 func _ready():
-	_ui_pause = $HUD/Pause
+	_ui_pause = $HUD/pause
 	_ui_hearts = [$HUD/Hearts/heart1, $HUD/Hearts/heart2, $HUD/Hearts/heart3]
 	_ui_score = $HUD/Score
 	update_hearts_ui()
@@ -46,28 +46,39 @@ func _ready():
 	_enna_ID = $Enna.get_instance_id()
 	
 func _process(delta: float):
-	# Increase score
-	_score_delta_time -= delta
-	if _score_delta_time <= 0:
-		_score += 1
-		_ui_score.text = "Score: %d" % _score
-		_score_delta_time = SCORE_INCREASE_COOLDOWN
+	CheckForKeyPress()
 	
-	# Spawn enemy
-	_enemy_delta_time -= delta
-	if _enemy_delta_time <= 0:
-		_spawner.SpawnEnemy(_speed)
-		_enemy_delta_time = rand_range(1.0, ENEMY_SPAWN_COOLDOWN)
-	
-	# Spawn health item
-	_health_delta_time -= delta
-	if _health_delta_time <= 0:
-		_spawner.SpawnHealth(_speed)
-		_health_delta_time = rand_range(5.0, HEALTH_SPAWN_COOLDOWN)
-	
-	# Update scrolling speed
-	_speed += (delta * SPEED_MULTIPLIER)
-	_bg.SetSpeed(_speed)
+	if Global.IsRunning():
+		# Increase score
+		_score_delta_time -= delta
+		if _score_delta_time <= 0:
+			_score += 1
+			_ui_score.text = "Score: %d" % _score
+			_score_delta_time = SCORE_INCREASE_COOLDOWN
+		
+		# Spawn enemy
+		_enemy_delta_time -= delta
+		if _enemy_delta_time <= 0:
+			_spawner.SpawnEnemy(_speed)
+			_enemy_delta_time = rand_range(1.0, ENEMY_SPAWN_COOLDOWN)
+		
+		# Spawn health item
+		_health_delta_time -= delta
+		if _health_delta_time <= 0:
+			_spawner.SpawnHealth(_speed)
+			_health_delta_time = rand_range(5.0, HEALTH_SPAWN_COOLDOWN)
+		
+		# Update scrolling speed
+		_speed += (delta * SPEED_MULTIPLIER)
+		_bg.SetSpeed(_speed)
+
+
+func CheckForKeyPress():
+	if Input.is_action_just_pressed("escape"):
+		if Global.IsRunning():
+			_on_pause_pressed()
+		else:
+			_on_resume_pressed()
 
 
 func DecreaseHealth():
@@ -87,14 +98,17 @@ func update_hearts_ui():
 	_ui_hearts[2].visible = (_health >= 3)
 
 func _on_pause_pressed():
+	Global.SetIsRunning(false)
 	_menu.show()
 
 
 func _on_resume_pressed():
+	Global.SetIsRunning(true)
 	_menu.hide()
 
 
 func _on_restart_pressed():
+	Global.StartGame()
 	pass # Replace with function body.
 
 
@@ -103,4 +117,4 @@ func _on_menu_pressed():
 
 
 func _on_quit_pressed():
-	pass # Replace with function body.
+	get_tree().quit()

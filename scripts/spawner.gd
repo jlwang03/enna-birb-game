@@ -17,7 +17,7 @@ func SpawnHealth(speed):
 	var health = health_items[i].instance()
 	health.initialize(GROUND_Y, speed)
 	
-	get_parent().add_child(health)
+	add_child(health)
 
 # Large spawn enemy function
 func SpawnEnemy(speed):
