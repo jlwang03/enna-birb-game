@@ -216,6 +216,7 @@ anims/default = SubResource( 22 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="sparkle"]
 position = Vector2( 954, 540 )
 frames = SubResource( 23 )
+frame = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="sparkle"]
 autoplay = "default"

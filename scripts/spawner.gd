@@ -36,7 +36,7 @@ func SpawnGroundEnemy(speed):
 	var enemy = ground_enemies[i].instance()
 	enemy.initialize(GROUND_Y, speed)
 	
-	get_parent().add_child(enemy)
+	add_child(enemy)
 
 
 # Enemies that need to slide to avoid
@@ -45,7 +45,7 @@ func SpawnAirEnemy(speed):
 	var enemy = air_enemies[i].instance()
 	enemy.initialize(AIR_Y, speed)
 	
-	get_parent().add_child(enemy)
+	add_child(enemy)
 	
 
 # Enemies that collide if player jumps
@@ -54,4 +54,4 @@ func SpawnFlyingEnemy(speed):
 	var enemy = air_enemies[i].instance()
 	enemy.initialize(FLYING_Y, speed)
 	
-	get_parent().add_child(enemy)
+	add_child(enemy)

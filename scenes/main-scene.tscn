@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://scripts/bg-endless-scrolling.gd" type="Script" id=1]
 [ext_resource path="res://art/final-assets/background/bg - 8 (bg).png" type="Texture" id=2]
@@ -23,6 +23,15 @@
 [ext_resource path="res://sprites/birbs/pigeon.tscn" type="PackedScene" id=21]
 [ext_resource path="res://sprites/birbs/crow-static.tscn" type="PackedScene" id=22]
 [ext_resource path="res://sprites/burrito.tscn" type="PackedScene" id=23]
+[ext_resource path="res://art/final-assets/pause screen/PAUSE-BG.PNG" type="Texture" id=24]
+[ext_resource path="res://art/final-assets/pause screen/Pause-Restart-Hover.png" type="Texture" id=25]
+[ext_resource path="res://art/final-assets/pause screen/Pause-Resume-Hover.png" type="Texture" id=26]
+[ext_resource path="res://art/final-assets/pause screen/Pause-Quit-Hover.png" type="Texture" id=27]
+[ext_resource path="res://art/final-assets/pause screen/Pause-menu.png" type="Texture" id=28]
+[ext_resource path="res://art/final-assets/pause screen/Pause-Quit.png" type="Texture" id=29]
+[ext_resource path="res://art/final-assets/pause screen/Pause-Restart.png" type="Texture" id=30]
+[ext_resource path="res://art/final-assets/pause screen/Pause-Resume.png" type="Texture" id=31]
+[ext_resource path="res://art/final-assets/pause screen/Pause-Menu-Hover.png" type="Texture" id=32]
 
 [sub_resource type="DynamicFont" id=1]
 size = 50
@@ -35,63 +44,8 @@ __meta__ = {
 "_edit_vertical_guides_": [ 3264.0 ]
 }
 
-[node name="Spawner" type="Node2D" parent="."]
-script = ExtResource( 18 )
-health_items = [ ExtResource( 23 ), ExtResource( 15 ) ]
-ground_enemies = [ ExtResource( 22 ), ExtResource( 20 ), ExtResource( 17 ) ]
-air_enemies = [ ExtResource( 4 ), ExtResource( 19 ), ExtResource( 21 ) ]
-
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
-
-[node name="HUD" type="Control" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
-
-[node name="Pause" type="TextureButton" parent="HUD"]
-margin_left = 800.0
-margin_top = -535.0
-margin_right = 1984.0
-margin_bottom = 536.0
-rect_scale = Vector2( 0.125, 0.125 )
-texture_normal = ExtResource( 13 )
-texture_pressed = ExtResource( 13 )
-texture_hover = ExtResource( 13 )
-
-[node name="Hearts" type="Control" parent="HUD"]
-margin_left = -950.0
-margin_top = -535.0
-margin_right = -910.0
-margin_bottom = -495.0
-
-[node name="heart1" type="Sprite" parent="HUD/Hearts"]
-position = Vector2( 60, 60 )
-scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 14 )
-
-[node name="heart2" type="Sprite" parent="HUD/Hearts"]
-position = Vector2( 165, 60 )
-scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 14 )
-
-[node name="heart3" type="Sprite" parent="HUD/Hearts"]
-position = Vector2( 270, 60 )
-scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 14 )
-
-[node name="Score" type="Label" parent="HUD"]
-margin_left = -927.0
-margin_top = -426.0
-margin_right = -719.0
-margin_bottom = -376.0
-custom_colors/font_color = Color( 0.411765, 0.32549, 0.45098, 1 )
-custom_fonts/font = SubResource( 1 )
-text = "Score: 999"
-
-[node name="Menu" type="Control" parent="."]
-margin_left = -1.0
-margin_right = 39.0
-margin_bottom = 40.0
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 offset = Vector2( 2640, 0 )
@@ -155,7 +109,111 @@ motion_mirroring = Vector2( 7200, 0 )
 texture = ExtResource( 10 )
 region_rect = Rect2( 0, 0, 1920, 1080 )
 
+[node name="Spawner" type="Node2D" parent="."]
+script = ExtResource( 18 )
+health_items = [ ExtResource( 23 ), ExtResource( 15 ) ]
+ground_enemies = [ ExtResource( 22 ), ExtResource( 20 ), ExtResource( 17 ) ]
+air_enemies = [ ExtResource( 4 ), ExtResource( 19 ), ExtResource( 21 ) ]
+
 [node name="Enna" parent="." instance=ExtResource( 3 )]
 position = Vector2( -500, 175 )
 
-[connection signal="pressed" from="HUD/Pause" to="." method="_on_Pause_pressed"]
+[node name="HUD" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="pause" type="TextureButton" parent="HUD"]
+margin_left = 800.0
+margin_top = -535.0
+margin_right = 1984.0
+margin_bottom = 536.0
+rect_scale = Vector2( 0.125, 0.125 )
+texture_normal = ExtResource( 13 )
+texture_pressed = ExtResource( 13 )
+texture_hover = ExtResource( 13 )
+
+[node name="Hearts" type="Control" parent="HUD"]
+margin_left = -950.0
+margin_top = -535.0
+margin_right = -910.0
+margin_bottom = -495.0
+
+[node name="heart1" type="Sprite" parent="HUD/Hearts"]
+position = Vector2( 60, 60 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 14 )
+
+[node name="heart2" type="Sprite" parent="HUD/Hearts"]
+position = Vector2( 165, 60 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 14 )
+
+[node name="heart3" type="Sprite" parent="HUD/Hearts"]
+position = Vector2( 270, 60 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 14 )
+
+[node name="Score" type="Label" parent="HUD"]
+margin_left = -927.0
+margin_top = -426.0
+margin_right = -719.0
+margin_bottom = -376.0
+custom_colors/font_color = Color( 0.411765, 0.32549, 0.45098, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Score: 999"
+
+[node name="Menu" type="Control" parent="."]
+
+[node name="Pause-Bg" type="Sprite" parent="Menu"]
+position = Vector2( 0, -25 )
+scale = Vector2( 0.55, 0.55 )
+texture = ExtResource( 24 )
+
+[node name="resume" type="TextureButton" parent="Menu/Pause-Bg"]
+margin_left = -425.454
+margin_top = -456.364
+margin_right = 424.546
+margin_bottom = -243.364
+texture_normal = ExtResource( 31 )
+texture_pressed = ExtResource( 26 )
+texture_hover = ExtResource( 26 )
+
+[node name="restart" type="TextureButton" parent="Menu/Pause-Bg"]
+margin_left = -425.454
+margin_top = -256.727
+margin_right = 424.546
+margin_bottom = -43.7274
+texture_normal = ExtResource( 30 )
+texture_pressed = ExtResource( 25 )
+texture_hover = ExtResource( 25 )
+
+[node name="menu" type="TextureButton" parent="Menu/Pause-Bg"]
+margin_left = -425.454
+margin_top = -91.273
+margin_right = 424.546
+margin_bottom = 121.727
+texture_normal = ExtResource( 28 )
+texture_pressed = ExtResource( 32 )
+texture_hover = ExtResource( 32 )
+
+[node name="quit" type="TextureButton" parent="Menu/Pause-Bg"]
+margin_left = -425.454
+margin_top = 96.3635
+margin_right = 424.546
+margin_bottom = 309.364
+texture_normal = ExtResource( 29 )
+texture_pressed = ExtResource( 27 )
+texture_hover = ExtResource( 27 )
+
+[node name="close" type="TextureButton" parent="Menu/Pause-Bg"]
+margin_left = -80.0
+margin_top = 729.091
+margin_right = 80.0
+margin_bottom = 889.091
+
+[connection signal="pressed" from="HUD/pause" to="." method="_on_pause_pressed"]
+[connection signal="pressed" from="Menu/Pause-Bg/resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="Menu/Pause-Bg/restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="Menu/Pause-Bg/menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="Menu/Pause-Bg/quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Menu/Pause-Bg/close" to="." method="_on_resume_pressed"]

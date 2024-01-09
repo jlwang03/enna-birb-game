@@ -16,7 +16,7 @@ func initialize(start_y: float = 425.0, speed: float = 12):
 	_has_collided = false
 
 func _ready():
-	_gameManager = get_parent()
+	_gameManager = get_parent().get_parent()
 	position = _start_pos
 
 func _process(delta: float) -> void:

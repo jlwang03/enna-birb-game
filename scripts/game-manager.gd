@@ -9,6 +9,7 @@ const HEALTH_SPAWN_COOLDOWN: float = 10.0
 onready var _ui_pause
 onready var _ui_hearts
 onready var _ui_score
+onready var _menu
 
 var _score
 var _health
@@ -35,6 +36,9 @@ func _ready():
 	_ui_hearts = [$HUD/Hearts/heart1, $HUD/Hearts/heart2, $HUD/Hearts/heart3]
 	_ui_score = $HUD/Score
 	update_hearts_ui()
+	
+	_menu = $Menu
+	_menu.hide()
 	
 	_spawner = $Spawner
 	_bg = $ParallaxBackground
@@ -82,6 +86,21 @@ func update_hearts_ui():
 	_ui_hearts[1].visible = (_health >= 2)
 	_ui_hearts[2].visible = (_health >= 3)
 
+func _on_pause_pressed():
+	_menu.show()
 
-func _on_Pause_pressed():
+
+func _on_resume_pressed():
+	_menu.hide()
+
+
+func _on_restart_pressed():
+	pass # Replace with function body.
+
+
+func _on_menu_pressed():
+	Global.GameOver(0)
+
+
+func _on_quit_pressed():
 	pass # Replace with function body.
