@@ -12,8 +12,8 @@
 [ext_resource path="res://art/final-assets/background/bg - 1 (top).png" type="Texture" id=10]
 [ext_resource path="res://art/final-assets/background/bg - 7.png" type="Texture" id=11]
 [ext_resource path="res://art/final-assets/background/bg - 6 (aloupeep).png" type="Texture" id=12]
-[ext_resource path="res://art/mockup-assets/ui/Pause-placeholder.PNG" type="Texture" id=13]
-[ext_resource path="res://art/mockup-assets/ui/Heart-placeholder.PNG" type="Texture" id=14]
+[ext_resource path="res://art/final-assets/ui/Pause.PNG" type="Texture" id=13]
+[ext_resource path="res://art/final-assets/ui/Heart.PNG" type="Texture" id=14]
 [ext_resource path="res://sprites/taco.tscn" type="PackedScene" id=15]
 [ext_resource path="res://art/final-assets/FlyingBird-Yz9Ga.otf" type="DynamicFontData" id=16]
 [ext_resource path="res://sprites/birbs/pigeon-static.tscn" type="PackedScene" id=17]
@@ -49,11 +49,11 @@ margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="Pause" type="TextureButton" parent="HUD"]
-margin_left = 825.0
+margin_left = 800.0
 margin_top = -535.0
-margin_right = 2873.0
-margin_bottom = 1513.0
-rect_scale = Vector2( 0.06, 0.06 )
+margin_right = 1984.0
+margin_bottom = 536.0
+rect_scale = Vector2( 0.125, 0.125 )
 texture_normal = ExtResource( 13 )
 texture_pressed = ExtResource( 13 )
 texture_hover = ExtResource( 13 )
@@ -64,31 +64,20 @@ margin_top = -535.0
 margin_right = -910.0
 margin_bottom = -495.0
 
-[node name="heart1" type="TextureRect" parent="HUD/Hearts"]
-margin_top = -3.0
-margin_right = 2048.0
-margin_bottom = 2045.0
-rect_scale = Vector2( 0.06, 0.06 )
+[node name="heart1" type="Sprite" parent="HUD/Hearts"]
+position = Vector2( 60, 60 )
+scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 14 )
-stretch_mode = 1
 
-[node name="heart2" type="TextureRect" parent="HUD/Hearts"]
-margin_left = 100.0
-margin_top = -3.0
-margin_right = 2148.0
-margin_bottom = 2045.0
-rect_scale = Vector2( 0.06, 0.06 )
+[node name="heart2" type="Sprite" parent="HUD/Hearts"]
+position = Vector2( 165, 60 )
+scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 14 )
-stretch_mode = 1
 
-[node name="heart3" type="TextureRect" parent="HUD/Hearts"]
-margin_left = 200.0
-margin_top = -3.0
-margin_right = 2248.0
-margin_bottom = 2045.0
-rect_scale = Vector2( 0.06, 0.06 )
+[node name="heart3" type="Sprite" parent="HUD/Hearts"]
+position = Vector2( 270, 60 )
+scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 14 )
-stretch_mode = 1
 
 [node name="Score" type="Label" parent="HUD"]
 margin_left = -927.0
