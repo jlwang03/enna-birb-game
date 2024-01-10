@@ -10,6 +10,7 @@ onready var _ui_pause
 onready var _ui_hearts
 onready var _ui_score
 onready var _menu
+onready var _menu_score
 
 var _score
 var _health
@@ -38,6 +39,7 @@ func _ready():
 	update_hearts_ui()
 	
 	_menu = $Menu
+	_menu_score = $Menu/Screen/score
 	_menu.hide()
 	
 	_spawner = $Spawner
@@ -100,6 +102,7 @@ func update_hearts_ui():
 func _on_pause_pressed():
 	Global.SetIsRunning(false)
 	_menu.show()
+	_menu_score.text = "Score: %d" % _score
 
 
 func _on_resume_pressed():

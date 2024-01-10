@@ -168,56 +168,66 @@ text = "Score: 999"
 [node name="Pause-Lightbg" type="Sprite" parent="Menu"]
 texture = ExtResource( 33 )
 
-[node name="Pause-Bg" type="Sprite" parent="Menu"]
+[node name="Screen" type="Sprite" parent="Menu"]
 position = Vector2( 0, -25 )
 scale = Vector2( 0.55, 0.55 )
 texture = ExtResource( 24 )
 
-[node name="resume" type="TextureButton" parent="Menu/Pause-Bg"]
+[node name="resume" type="TextureButton" parent="Menu/Screen"]
 margin_left = -425.454
-margin_top = -456.364
+margin_top = -449.091
 margin_right = 424.546
-margin_bottom = -243.364
+margin_bottom = -236.091
 texture_normal = ExtResource( 31 )
 texture_pressed = ExtResource( 26 )
 texture_hover = ExtResource( 26 )
 
-[node name="restart" type="TextureButton" parent="Menu/Pause-Bg"]
+[node name="restart" type="TextureButton" parent="Menu/Screen"]
 margin_left = -425.454
-margin_top = -256.727
+margin_top = -249.454
 margin_right = 424.546
-margin_bottom = -43.7274
+margin_bottom = -36.4539
 texture_normal = ExtResource( 30 )
 texture_pressed = ExtResource( 25 )
 texture_hover = ExtResource( 25 )
 
-[node name="menu" type="TextureButton" parent="Menu/Pause-Bg"]
+[node name="menu" type="TextureButton" parent="Menu/Screen"]
 margin_left = -425.454
-margin_top = -91.273
+margin_top = -83.9999
 margin_right = 424.546
-margin_bottom = 121.727
+margin_bottom = 129.0
 texture_normal = ExtResource( 28 )
 texture_pressed = ExtResource( 32 )
 texture_hover = ExtResource( 32 )
 
-[node name="quit" type="TextureButton" parent="Menu/Pause-Bg"]
+[node name="quit" type="TextureButton" parent="Menu/Screen"]
 margin_left = -425.454
-margin_top = 96.3635
+margin_top = 103.637
 margin_right = 424.546
-margin_bottom = 309.364
+margin_bottom = 316.637
 texture_normal = ExtResource( 29 )
 texture_pressed = ExtResource( 27 )
 texture_hover = ExtResource( 27 )
 
-[node name="close" type="TextureButton" parent="Menu/Pause-Bg"]
+[node name="close" type="TextureButton" parent="Menu/Screen"]
 margin_left = -80.0
 margin_top = 729.091
 margin_right = 80.0
 margin_bottom = 889.091
 
+[node name="score" type="Label" parent="Menu/Screen"]
+margin_left = -114.545
+margin_top = -514.545
+margin_right = 93.4545
+margin_bottom = -464.545
+grow_horizontal = 2
+custom_colors/font_color = Color( 0.639216, 0.713726, 0.807843, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Score: 999"
+
 [connection signal="pressed" from="HUD/pause" to="." method="_on_pause_pressed"]
-[connection signal="pressed" from="Menu/Pause-Bg/resume" to="." method="_on_resume_pressed"]
-[connection signal="pressed" from="Menu/Pause-Bg/restart" to="." method="_on_restart_pressed"]
-[connection signal="pressed" from="Menu/Pause-Bg/menu" to="." method="_on_menu_pressed"]
-[connection signal="pressed" from="Menu/Pause-Bg/quit" to="." method="_on_quit_pressed"]
-[connection signal="pressed" from="Menu/Pause-Bg/close" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="Menu/Screen/resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="Menu/Screen/restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="Menu/Screen/menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="Menu/Screen/quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Menu/Screen/close" to="." method="_on_resume_pressed"]
