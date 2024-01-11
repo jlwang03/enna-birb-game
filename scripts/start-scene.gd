@@ -1,10 +1,13 @@
 extends Node
 
 onready var _tutorial_screens
+onready var _credits_screens
 
 func _ready():
 	_tutorial_screens = $tutorial
 	_tutorial_screens.hide()
+	_credits_screens = $credits
+	_credits_screens.hide()
 	
 	$Score.text = "Highscore: %d" % Global.GetHighscore()
 
@@ -12,10 +15,10 @@ func _on_start_pressed():
 	Global.StartGame()
 
 func _on_tutorial_pressed():
-	_tutorial_screens.show()
+	_tutorial_screens.Open()
 
 func _on_credits_pressed():
-	pass # Replace with function body.
+	_credits_screens.Open()
 
 func _on_quit_pressed():
 	get_tree().quit()

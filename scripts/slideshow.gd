@@ -17,8 +17,11 @@ func _ready():
 	_right_button = $"right-button"
 	_right_button.show()
 	
+
+func Open():
 	_screen_index = 0
 	LoadScreen(_screen_index)
+	show()
 
 
 func _on_left_pressed():

@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=2]
+[gd_scene load_steps=49 format=2]
 
 [ext_resource path="res://art/final-assets/START-bg.JPG" type="Texture" id=1]
 [ext_resource path="res://scripts/start-scene.gd" type="Script" id=2]
@@ -30,6 +30,10 @@
 [ext_resource path="res://art/final-assets/tutorial screen/tutorial 3.jpeg" type="Texture" id=28]
 [ext_resource path="res://art/final-assets/pause screen/Menu-Hover.png" type="Texture" id=29]
 [ext_resource path="res://art/final-assets/pause screen/menu.png" type="Texture" id=30]
+[ext_resource path="res://art/final-assets/tutorial screen/tutorial 8.jpeg" type="Texture" id=31]
+[ext_resource path="res://art/final-assets/tutorial screen/tutorial 7.jpeg" type="Texture" id=32]
+[ext_resource path="res://art/final-assets/tutorial screen/tutorial 9.jpeg" type="Texture" id=33]
+[ext_resource path="res://art/final-assets/credits screen/Page1/Credit-bg.JPG" type="Texture" id=34]
 
 [sub_resource type="DynamicFont" id=12]
 size = 70
@@ -253,7 +257,7 @@ valign = 1
 
 [node name="tutorial" type="Node2D" parent="."]
 script = ExtResource( 19 )
-_screens = [ ExtResource( 17 ), ExtResource( 26 ), ExtResource( 28 ), ExtResource( 27 ), ExtResource( 25 ), ExtResource( 24 ) ]
+_screens = [ ExtResource( 17 ), ExtResource( 26 ), ExtResource( 28 ), ExtResource( 27 ), ExtResource( 25 ), ExtResource( 24 ), ExtResource( 32 ), ExtResource( 31 ), ExtResource( 33 ) ]
 
 [node name="screen" type="TextureRect" parent="tutorial"]
 margin_right = 40.0
@@ -293,6 +297,43 @@ texture_normal = ExtResource( 30 )
 texture_pressed = ExtResource( 29 )
 texture_hover = ExtResource( 29 )
 
+[node name="credits" type="Node2D" parent="."]
+script = ExtResource( 19 )
+_screens = [ ExtResource( 34 ), ExtResource( 34 ) ]
+
+[node name="screen" type="TextureRect" parent="credits"]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 34 )
+
+[node name="left-button" type="TextureButton" parent="credits"]
+margin_left = 27.0
+margin_top = 957.0
+margin_right = 111.0
+margin_bottom = 1040.0
+texture_normal = ExtResource( 20 )
+texture_pressed = ExtResource( 21 )
+texture_hover = ExtResource( 21 )
+
+[node name="right-button" type="TextureButton" parent="credits"]
+margin_left = 1811.0
+margin_top = 957.0
+margin_right = 1895.0
+margin_bottom = 1040.0
+texture_normal = ExtResource( 22 )
+texture_pressed = ExtResource( 23 )
+texture_hover = ExtResource( 23 )
+
+[node name="menu-button" type="TextureButton" parent="credits"]
+margin_left = 860.0
+margin_top = 946.0
+margin_right = 1250.0
+margin_bottom = 1159.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 30 )
+texture_pressed = ExtResource( 29 )
+texture_hover = ExtResource( 29 )
+
 [connection signal="pressed" from="start-button" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="tutorial-button" to="." method="_on_tutorial_pressed"]
 [connection signal="pressed" from="credits-button" to="." method="_on_credits_pressed"]
@@ -300,3 +341,6 @@ texture_hover = ExtResource( 29 )
 [connection signal="pressed" from="tutorial/left-button" to="tutorial" method="_on_left_pressed"]
 [connection signal="pressed" from="tutorial/right-button" to="tutorial" method="_on_right_pressed"]
 [connection signal="pressed" from="tutorial/menu-button" to="tutorial" method="_on_menu_pressed"]
+[connection signal="pressed" from="credits/left-button" to="credits" method="_on_left_pressed"]
+[connection signal="pressed" from="credits/right-button" to="credits" method="_on_right_pressed"]
+[connection signal="pressed" from="credits/menu-button" to="credits" method="_on_menu_pressed"]
