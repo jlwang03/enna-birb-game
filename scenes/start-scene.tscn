@@ -258,7 +258,7 @@ valign = 1
 [node name="tutorial" type="Node2D" parent="."]
 visible = false
 script = ExtResource( 19 )
-_screens = [ ExtResource( 17 ), ExtResource( 26 ), ExtResource( 28 ), ExtResource( 27 ), ExtResource( 25 ), ExtResource( 24 ), ExtResource( 32 ), ExtResource( 31 ), ExtResource( 33 ) ]
+_screens = [ ExtResource( 17 ), ExtResource( 26 ), ExtResource( 28 ), ExtResource( 27 ), ExtResource( 25 ), ExtResource( 24 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ) ]
 
 [node name="screen" type="TextureRect" parent="tutorial"]
 margin_right = 40.0
