@@ -256,6 +256,7 @@ text = "An Enna fan game"
 valign = 1
 
 [node name="tutorial" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 19 )
 _screens = [ ExtResource( 17 ), ExtResource( 26 ), ExtResource( 28 ), ExtResource( 27 ), ExtResource( 25 ), ExtResource( 24 ), ExtResource( 32 ), ExtResource( 31 ), ExtResource( 33 ) ]
 
@@ -298,6 +299,7 @@ texture_pressed = ExtResource( 29 )
 texture_hover = ExtResource( 29 )
 
 [node name="credits" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 19 )
 _screens = [ ExtResource( 34 ), ExtResource( 34 ) ]
 
