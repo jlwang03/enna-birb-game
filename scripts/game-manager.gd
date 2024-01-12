@@ -11,6 +11,7 @@ onready var _ui_hearts
 onready var _ui_score
 onready var _menu
 onready var _menu_score
+onready var _death_screen
 
 var _score
 var _health
@@ -41,6 +42,8 @@ func _ready():
 	_menu = $Menu
 	_menu_score = $Menu/Screen/score
 	_menu.hide()
+	_death_screen = $DeathScreen
+	_death_screen.hide()
 	
 	_spawner = $Spawner
 	_bg = $ParallaxBackground
@@ -86,18 +89,21 @@ func CheckForKeyPress():
 func DecreaseHealth():
 	_health -= 1
 	if _health <= 0:
-		Global.GameOver(_score)
+		_death_screen.OpenScreen(_score)
 	update_hearts_ui()
-	
+
+
 func IncreaseHealth():
 	if _health < 3:
 		_health += 1
 		update_hearts_ui()
-	
+
+
 func update_hearts_ui():
 	_ui_hearts[0].visible = (_health >= 1)
 	_ui_hearts[1].visible = (_health >= 2)
 	_ui_hearts[2].visible = (_health >= 3)
+
 
 func _on_pause_pressed():
 	Global.SetIsRunning(false)
@@ -112,7 +118,6 @@ func _on_resume_pressed():
 
 func _on_restart_pressed():
 	Global.StartGame()
-	pass # Replace with function body.
 
 
 func _on_menu_pressed():
