@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=2]
+[gd_scene load_steps=46 format=2]
 
 [ext_resource path="res://scripts/bg-endless-scrolling.gd" type="Script" id=1]
 [ext_resource path="res://art/final-assets/background/bg - 8 (bg).png" type="Texture" id=2]
@@ -42,6 +42,8 @@
 [ext_resource path="res://art/final-assets/death screen/Death-Menu.PNG" type="Texture" id=40]
 [ext_resource path="res://art/final-assets/death screen/Death-Menu-Hover.PNG" type="Texture" id=41]
 [ext_resource path="res://scripts/death-screen.gd" type="Script" id=42]
+[ext_resource path="res://art/final-assets/death screen/Death-Enna-03.PNG" type="Texture" id=43]
+[ext_resource path="res://art/final-assets/death screen/Death-Enna-01.PNG" type="Texture" id=44]
 
 [sub_resource type="DynamicFont" id=1]
 size = 100
@@ -240,6 +242,8 @@ margin_top = -540.0
 margin_right = -960.0
 margin_bottom = -540.0
 script = ExtResource( 42 )
+_texture = [ ExtResource( 44 ), ExtResource( 37 ), ExtResource( 43 ) ]
+_texture_position = [ Vector2( 480, 200 ), Vector2( 480, 200 ), Vector2( 480, 280 ) ]
 
 [node name="background" type="TextureRect" parent="DeathScreen"]
 margin_right = 1920.0
@@ -259,9 +263,9 @@ align = 1
 
 [node name="enna" type="TextureRect" parent="DeathScreen"]
 margin_left = 480.0
-margin_top = 177.0
+margin_top = 200.0
 margin_right = 1402.0
-margin_bottom = 894.0
+margin_bottom = 917.0
 texture = ExtResource( 37 )
 
 [node name="restart" type="TextureButton" parent="DeathScreen"]
