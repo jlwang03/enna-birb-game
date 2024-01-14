@@ -14,5 +14,5 @@ func OpenScreen(score: int):
 	var i = randi() % _texture.size()
 	$enna.texture = _texture[i]
 	$enna.rect_position = _texture_position[i]
-	$score.text = "Score: %d" % score
+	$score.text = "Distance: %d" % score
 	show()

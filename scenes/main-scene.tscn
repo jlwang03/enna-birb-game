@@ -238,7 +238,7 @@ margin_bottom = -464.545
 grow_horizontal = 2
 custom_colors/font_color = Color( 0.639216, 0.713726, 0.807843, 1 )
 custom_fonts/font = SubResource( 1 )
-text = "Score: 999"
+text = "Distance: 999"
 
 [node name="DeathScreen" type="Control" parent="."]
 visible = false
@@ -263,7 +263,7 @@ margin_bottom = 300.0
 grow_horizontal = 2
 custom_colors/font_color = Color( 0.756863, 0.670588, 0.792157, 1 )
 custom_fonts/font = SubResource( 1 )
-text = "Score: 999"
+text = "Distance: 999"
 align = 1
 
 [node name="enna" type="TextureRect" parent="DeathScreen"]

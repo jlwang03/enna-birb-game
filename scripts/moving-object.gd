@@ -11,7 +11,7 @@ var _velocity: Vector2
 var _has_collided: bool
 
 func initialize(start_y: float = 425.0, speed: float = 12):
-	_start_pos = Vector2(1100.0, start_y)
+	_start_pos = Vector2(1200.0, start_y)
 	_velocity = Vector2(speed * (-1) * SPEED_MULTIPLIER, 0)
 	_has_collided = false
 
@@ -33,6 +33,7 @@ func _physics_process(delta):
 		if collision_info and (collision_info.collider_id == _gameManager._enna_ID) and not _has_collided:
 			_has_collided = true
 			collide_with_player()
+	position.y = _start_pos.y
 		
 func DestroyObject():
 	self.queue_free()

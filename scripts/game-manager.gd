@@ -108,7 +108,7 @@ func update_hearts_ui():
 func _on_pause_pressed():
 	Global.SetIsRunning(false)
 	_menu.show()
-	_menu_score.text = "Score: %d" % _score
+	_menu_score.text = "Distance: %d" % _score
 
 
 func _on_resume_pressed():
