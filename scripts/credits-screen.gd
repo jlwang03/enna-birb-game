@@ -19,3 +19,23 @@ func LoadScreen(index: int):
 			$screens.get_child(i).hide()
 	
 	UpdateButtons()
+
+
+func _on_julitch_pressed():
+	OS.shell_open("https://julwang.itch.io/")
+
+
+func _on_cuppatinainsta_pressed():
+	OS.shell_open("https://www.instagram.com/cuppatina.art")
+
+
+func _on_cuppatinatwitter_pressed():
+	OS.shell_open("https://twitter.com/cuppatina_art")
+
+
+func _on_ghoustinsta_pressed():
+	OS.shell_open("https://www.instagram.com/ghoustboi")
+
+
+func _on_ghousttwitter_pressed():
+	OS.shell_open("https://twitter.com/ghoustboi_laine")

@@ -301,10 +301,10 @@ texture_pressed = ExtResource( 23 )
 texture_hover = ExtResource( 23 )
 
 [node name="menu-button" type="TextureButton" parent="tutorial"]
-margin_left = 1650.0
-margin_top = 75.0
-margin_right = 2040.0
-margin_bottom = 288.0
+margin_left = 1660.0
+margin_top = 60.0
+margin_right = 2050.0
+margin_bottom = 273.0
 rect_scale = Vector2( 0.5, 0.5 )
 texture_normal = ExtResource( 30 )
 texture_pressed = ExtResource( 29 )
@@ -323,46 +323,46 @@ margin_bottom = 1080.0
 texture = ExtResource( 34 )
 
 [node name="julitch" type="TextureButton" parent="credits/screens/screen-1"]
-margin_left = 174.0
-margin_top = 780.0
-margin_right = 546.0
-margin_bottom = 893.0
+margin_left = 170.0
+margin_top = 784.0
+margin_right = 542.0
+margin_bottom = 897.0
 texture_normal = ExtResource( 37 )
 texture_pressed = ExtResource( 38 )
 texture_hover = ExtResource( 38 )
 
 [node name="cuppatinainsta" type="TextureButton" parent="credits/screens/screen-1"]
-margin_left = 1321.0
-margin_top = 737.0
-margin_right = 1804.0
-margin_bottom = 845.0
+margin_left = 1309.0
+margin_top = 739.0
+margin_right = 1792.0
+margin_bottom = 847.0
 texture_normal = ExtResource( 39 )
 texture_pressed = ExtResource( 42 )
 texture_hover = ExtResource( 42 )
 
 [node name="cuppatinatwitter" type="TextureButton" parent="credits/screens/screen-1"]
-margin_left = 1314.0
-margin_top = 844.0
-margin_right = 1797.0
-margin_bottom = 952.0
+margin_left = 1307.0
+margin_top = 875.0
+margin_right = 1790.0
+margin_bottom = 983.0
 texture_normal = ExtResource( 41 )
 texture_pressed = ExtResource( 40 )
 texture_hover = ExtResource( 40 )
 
 [node name="ghoustinsta" type="TextureButton" parent="credits/screens/screen-1"]
-margin_left = 732.0
-margin_top = 737.0
-margin_right = 1093.0
-margin_bottom = 857.0
+margin_left = 736.0
+margin_top = 739.0
+margin_right = 1097.0
+margin_bottom = 859.0
 texture_normal = ExtResource( 43 )
 texture_pressed = ExtResource( 46 )
 texture_hover = ExtResource( 46 )
 
 [node name="ghousttwitter" type="TextureButton" parent="credits/screens/screen-1"]
-margin_left = 736.0
-margin_top = 844.0
-margin_right = 1204.0
-margin_bottom = 962.0
+margin_left = 734.0
+margin_top = 875.0
+margin_right = 1202.0
+margin_bottom = 993.0
 texture_normal = ExtResource( 45 )
 texture_pressed = ExtResource( 44 )
 texture_hover = ExtResource( 44 )
@@ -392,10 +392,10 @@ texture_pressed = ExtResource( 23 )
 texture_hover = ExtResource( 23 )
 
 [node name="menu-button" type="TextureButton" parent="credits"]
-margin_left = 860.0
-margin_top = 949.0
-margin_right = 1250.0
-margin_bottom = 1162.0
+margin_left = 1660.0
+margin_top = 60.0
+margin_right = 2050.0
+margin_bottom = 273.0
 rect_scale = Vector2( 0.5, 0.5 )
 texture_normal = ExtResource( 30 )
 texture_pressed = ExtResource( 29 )
@@ -408,6 +408,11 @@ texture_hover = ExtResource( 29 )
 [connection signal="pressed" from="tutorial/left-button" to="tutorial" method="_on_left_pressed"]
 [connection signal="pressed" from="tutorial/right-button" to="tutorial" method="_on_right_pressed"]
 [connection signal="pressed" from="tutorial/menu-button" to="tutorial" method="_on_menu_pressed"]
+[connection signal="pressed" from="credits/screens/screen-1/julitch" to="credits" method="_on_julitch_pressed"]
+[connection signal="pressed" from="credits/screens/screen-1/cuppatinainsta" to="credits" method="_on_cuppatinainsta_pressed"]
+[connection signal="pressed" from="credits/screens/screen-1/cuppatinatwitter" to="credits" method="_on_cuppatinatwitter_pressed"]
+[connection signal="pressed" from="credits/screens/screen-1/ghoustinsta" to="credits" method="_on_ghoustinsta_pressed"]
+[connection signal="pressed" from="credits/screens/screen-1/ghousttwitter" to="credits" method="_on_ghousttwitter_pressed"]
 [connection signal="pressed" from="credits/left-button" to="credits" method="_on_left_pressed"]
 [connection signal="pressed" from="credits/right-button" to="credits" method="_on_right_pressed"]
 [connection signal="pressed" from="credits/menu-button" to="credits" method="_on_menu_pressed"]
