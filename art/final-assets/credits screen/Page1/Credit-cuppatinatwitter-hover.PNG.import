@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Credit-ChristinaInsta.PNG-8d3b0943263d9a8a574e52856ae9c807.stex"
+path="res://.import/Credit-cuppatinatwitter-hover.PNG-d558fd003bfbaa684aadbdbcf8e8bee4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/final-assets/credits screen/Page1/Credit-ChristinaInsta.PNG"
-dest_files=[ "res://.import/Credit-ChristinaInsta.PNG-8d3b0943263d9a8a574e52856ae9c807.stex" ]
+source_file="res://art/final-assets/credits screen/Page1/Credit-cuppatinatwitter-hover.PNG"
+dest_files=[ "res://.import/Credit-cuppatinatwitter-hover.PNG-d558fd003bfbaa684aadbdbcf8e8bee4.stex" ]
 
 [params]
 

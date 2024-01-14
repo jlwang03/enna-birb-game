@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Credit-ElaineTwitter-hover.PNG-d1ed68736ad8dceab543929f842beecf.stex"
+path="res://.import/Credit-ghoustinsta.PNG-fe31aba1422d365c7c24c6bd65ef9f8b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/final-assets/credits screen/Page1/Credit-ElaineTwitter-hover.PNG"
-dest_files=[ "res://.import/Credit-ElaineTwitter-hover.PNG-d1ed68736ad8dceab543929f842beecf.stex" ]
+source_file="res://art/final-assets/credits screen/Page1/Credit-ghoustinsta.PNG"
+dest_files=[ "res://.import/Credit-ghoustinsta.PNG-fe31aba1422d365c7c24c6bd65ef9f8b.stex" ]
 
 [params]
 

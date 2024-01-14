@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Credit-ElaineInsta.PNG-5c401d1a309da7a63c994f2408b62cc4.stex"
+path="res://.import/Credit-ghousttwitter.PNG-6b4e4495d420702c3dc349900a8b8158.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/final-assets/credits screen/Page1/Credit-ElaineInsta.PNG"
-dest_files=[ "res://.import/Credit-ElaineInsta.PNG-5c401d1a309da7a63c994f2408b62cc4.stex" ]
+source_file="res://art/final-assets/credits screen/Page1/Credit-ghousttwitter.PNG"
+dest_files=[ "res://.import/Credit-ghousttwitter.PNG-6b4e4495d420702c3dc349900a8b8158.stex" ]
 
 [params]
 
