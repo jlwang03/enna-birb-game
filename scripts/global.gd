@@ -58,5 +58,5 @@ func SetIsRunning(running: bool):
 
 func SetLoading(scene: String):
 	get_tree().change_scene("res://scenes/loading-scene.tscn")
-	_duration = LOADING_SCENE_DURATION
+	_duration = rand_range(0.5, LOADING_SCENE_DURATION)
 	_scene_to_load = scene

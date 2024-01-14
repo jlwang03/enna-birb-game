@@ -311,6 +311,7 @@ texture_pressed = ExtResource( 29 )
 texture_hover = ExtResource( 29 )
 
 [node name="credits" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 35 )
 
 [node name="screens" type="Control" parent="credits"]

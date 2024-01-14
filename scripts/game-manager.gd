@@ -3,8 +3,8 @@ extends Node2D
 
 const SPEED_MULTIPLIER: float = 0.1
 const SCORE_INCREASE_COOLDOWN: float = 0.0
-const ENEMY_SPAWN_COOLDOWN: float = 2.5
-const HEALTH_SPAWN_COOLDOWN: float = 10.0
+const ENEMY_SPAWN_COOLDOWN: float = 2.0
+const HEALTH_SPAWN_COOLDOWN: float = 15.0
 
 onready var _ui_pause
 onready var _ui_hearts
@@ -63,15 +63,15 @@ func _process(delta: float):
 		
 		# Spawn enemy
 		_enemy_delta_time -= delta
+		_health_delta_time -= delta
 		if _enemy_delta_time <= 0:
-			_spawner.SpawnEnemy(_speed)
+			var enemy_y = _spawner.SpawnEnemy(_speed)
 			_enemy_delta_time = rand_range(1.0, ENEMY_SPAWN_COOLDOWN)
 		
-		# Spawn health item
-		_health_delta_time -= delta
-		if _health_delta_time <= 0:
-			_spawner.SpawnHealth(_speed)
-			_health_delta_time = rand_range(5.0, HEALTH_SPAWN_COOLDOWN)
+			# Spawn health item
+			if _health_delta_time <= 0:
+				_spawner.SpawnHealth(_speed, enemy_y)
+				_health_delta_time = rand_range(7.5, HEALTH_SPAWN_COOLDOWN)
 		
 		# Update scrolling speed
 		_speed += (delta * SPEED_MULTIPLIER)

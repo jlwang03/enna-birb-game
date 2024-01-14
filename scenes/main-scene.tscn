@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=2]
+[gd_scene load_steps=47 format=2]
 
 [ext_resource path="res://scripts/bg-endless-scrolling.gd" type="Script" id=1]
 [ext_resource path="res://art/final-assets/background/bg - 8 (bg).png" type="Texture" id=2]
@@ -44,6 +44,7 @@
 [ext_resource path="res://scripts/death-screen.gd" type="Script" id=42]
 [ext_resource path="res://art/final-assets/death screen/Death-Enna-03.PNG" type="Texture" id=43]
 [ext_resource path="res://art/final-assets/death screen/Death-Enna-01.PNG" type="Texture" id=44]
+[ext_resource path="res://sprites/obstacles/beam.tscn" type="PackedScene" id=45]
 
 [sub_resource type="DynamicFont" id=1]
 size = 50
@@ -124,14 +125,10 @@ region_rect = Rect2( 0, 0, 1920, 1080 )
 [node name="Spawner" type="Node2D" parent="."]
 script = ExtResource( 18 )
 health_items = [ ExtResource( 23 ), ExtResource( 15 ) ]
-ground_enemies = [ ExtResource( 22 ), ExtResource( 20 ), ExtResource( 17 ), ExtResource( 34 ), ExtResource( 35 ) ]
+ground_enemies = [ ExtResource( 22 ), ExtResource( 20 ), ExtResource( 17 ) ]
+ground_obstacles = [ ExtResource( 34 ), ExtResource( 35 ) ]
 air_enemies = [ ExtResource( 4 ), ExtResource( 19 ), ExtResource( 21 ) ]
-
-[node name="cone" parent="Spawner" instance=ExtResource( 34 )]
-position = Vector2( -23, 380 )
-
-[node name="crow-static" parent="Spawner" instance=ExtResource( 22 )]
-position = Vector2( 195, 380 )
+air_beam = ExtResource( 45 )
 
 [node name="Enna" parent="." instance=ExtResource( 3 )]
 position = Vector2( -500, 175 )
