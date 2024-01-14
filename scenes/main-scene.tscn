@@ -46,7 +46,7 @@
 [ext_resource path="res://art/final-assets/death screen/Death-Enna-01.PNG" type="Texture" id=44]
 
 [sub_resource type="DynamicFont" id=1]
-size = 100
+size = 50
 font_data = ExtResource( 16 )
 
 [node name="MainScene" type="Node2D"]
@@ -172,9 +172,10 @@ margin_right = -719.0
 margin_bottom = -376.0
 custom_colors/font_color = Color( 0.411765, 0.32549, 0.45098, 1 )
 custom_fonts/font = SubResource( 1 )
-text = "Score: 999"
+text = "Distance: 999m"
 
 [node name="Menu" type="Control" parent="."]
+visible = false
 
 [node name="Pause-Lightbg" type="Sprite" parent="Menu"]
 texture = ExtResource( 33 )
@@ -237,6 +238,7 @@ custom_fonts/font = SubResource( 1 )
 text = "Score: 999"
 
 [node name="DeathScreen" type="Control" parent="."]
+visible = false
 margin_left = -960.0
 margin_top = -540.0
 margin_right = -960.0

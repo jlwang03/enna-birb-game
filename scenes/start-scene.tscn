@@ -217,7 +217,7 @@ margin_right = 1266.0
 margin_bottom = 1035.0
 custom_colors/font_color = Color( 0.411765, 0.32549, 0.45098, 1 )
 custom_fonts/font = SubResource( 12 )
-text = "Highscore: 0"
+text = "Max Distance: 0"
 valign = 1
 
 [node name="enna-idle" type="Node2D" parent="."]
@@ -301,6 +301,7 @@ texture_pressed = ExtResource( 29 )
 texture_hover = ExtResource( 29 )
 
 [node name="credits" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 35 )
 
 [node name="screens" type="Control" parent="credits"]
@@ -311,6 +312,10 @@ margin_bottom = 40.0
 margin_right = 1920.0
 margin_bottom = 1080.0
 texture = ExtResource( 34 )
+
+[node name="julitch" type="TextureButton" parent="credits/screens/screen-1"]
+margin_right = 40.0
+margin_bottom = 40.0
 
 [node name="screen-2" type="TextureRect" parent="credits/screens"]
 visible = false

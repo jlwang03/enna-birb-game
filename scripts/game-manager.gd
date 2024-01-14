@@ -58,7 +58,7 @@ func _process(delta: float):
 		_score_delta_time -= delta
 		if _score_delta_time <= 0:
 			_score += 1
-			_ui_score.text = "Score: %d" % _score
+			_ui_score.text = "Distance: %dm" % _score
 			_score_delta_time = SCORE_INCREASE_COOLDOWN
 		
 		# Spawn enemy
