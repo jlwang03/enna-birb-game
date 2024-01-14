@@ -33,13 +33,19 @@ _global_script_classes=[ {
 "class": "ObstacleObject",
 "language": "GDScript",
 "path": "res://scripts/obstacle-object.gd"
+}, {
+"base": "Node2D",
+"class": "Slideshow",
+"language": "GDScript",
+"path": "res://scripts/slideshow-screen.gd"
 } ]
 _global_script_class_icons={
 "Enna": "",
 "GitAPI": "",
 "HealthObject": "",
 "MovingObject": "",
-"ObstacleObject": ""
+"ObstacleObject": "",
+"Slideshow": ""
 }
 
 [application]

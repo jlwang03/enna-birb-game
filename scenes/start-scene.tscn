@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=2]
+[gd_scene load_steps=51 format=2]
 
 [ext_resource path="res://art/final-assets/START-bg.JPG" type="Texture" id=1]
 [ext_resource path="res://scripts/start-scene.gd" type="Script" id=2]
@@ -18,7 +18,7 @@
 [ext_resource path="res://art/final-assets/Logo.PNG" type="Texture" id=16]
 [ext_resource path="res://art/final-assets/tutorial screen/tutorial 1.jpeg" type="Texture" id=17]
 [ext_resource path="res://art/final-assets/ui/Frame-02.PNG" type="Texture" id=18]
-[ext_resource path="res://scripts/slideshow.gd" type="Script" id=19]
+[ext_resource path="res://scripts/tutorial-screen.gd" type="Script" id=19]
 [ext_resource path="res://art/final-assets/ui/Credit-Leftarrow.PNG" type="Texture" id=20]
 [ext_resource path="res://art/final-assets/ui/Credit-Leftarrow-hover.PNG" type="Texture" id=21]
 [ext_resource path="res://art/final-assets/ui/Credit-Rightarrow.PNG" type="Texture" id=22]
@@ -34,6 +34,8 @@
 [ext_resource path="res://art/final-assets/tutorial screen/tutorial 7.jpeg" type="Texture" id=32]
 [ext_resource path="res://art/final-assets/tutorial screen/tutorial 9.jpeg" type="Texture" id=33]
 [ext_resource path="res://art/final-assets/credits screen/Page1/Credit-bg.JPG" type="Texture" id=34]
+[ext_resource path="res://scripts/credits-screen.gd" type="Script" id=35]
+[ext_resource path="res://art/mockup-assets/credits-pg2.PNG" type="Texture" id=36]
 
 [sub_resource type="DynamicFont" id=12]
 size = 70
@@ -299,14 +301,22 @@ texture_pressed = ExtResource( 29 )
 texture_hover = ExtResource( 29 )
 
 [node name="credits" type="Node2D" parent="."]
-visible = false
-script = ExtResource( 19 )
-_screens = [ ExtResource( 34 ), ExtResource( 34 ) ]
+script = ExtResource( 35 )
 
-[node name="screen" type="TextureRect" parent="credits"]
+[node name="screens" type="Control" parent="credits"]
 margin_right = 40.0
 margin_bottom = 40.0
+
+[node name="screen-1" type="TextureRect" parent="credits/screens"]
+margin_right = 1920.0
+margin_bottom = 1080.0
 texture = ExtResource( 34 )
+
+[node name="screen-2" type="TextureRect" parent="credits/screens"]
+visible = false
+margin_right = 1920.0
+margin_bottom = 1080.0
+texture = ExtResource( 36 )
 
 [node name="left-button" type="TextureButton" parent="credits"]
 margin_left = 27.0
