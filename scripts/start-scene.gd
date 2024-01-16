@@ -9,7 +9,7 @@ func _ready():
 	_credits_screens = $credits
 	_credits_screens.hide()
 	
-	$Score.text = "Max Distance: %d" % Global.GetHighscore()
+	$Score.text = "Max Distance: %dm" % Global.GetHighscore()
 
 func _on_start_pressed():
 	Global.StartGame()

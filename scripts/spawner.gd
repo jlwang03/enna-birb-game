@@ -3,7 +3,8 @@ extends Node2D
 const GROUND_Y: float = 380.0
 const AIR_Y: float = 25.0
 const FLYING_Y: float = -125.0
-const BEAM_Y: float = -250.0
+const BEAM_Y_LOW: float = -215.0
+const BEAM_Y_HIGH: float = -400.0
 
 export(Array, PackedScene) var health_items
 export(Array, PackedScene) var ground_enemies
@@ -36,11 +37,11 @@ func SpawnEnemy(speed):
 		0:
 			return SpawnGroundEnemy(speed)
 		1:
-			return SpawnAirEnemy(speed)
+			return SpawnGroundObstacles(speed)
 		2:
-			return SpawnFlyingEnemy(speed)
+			return SpawnAirEnemy(speed)
 		3:
-			return SpawnGroundEnemy(speed)
+			return SpawnFlyingEnemy(speed)
 		4:
 			return SpawnBeam(speed)
 
@@ -87,7 +88,7 @@ func SpawnFlyingEnemy(speed):
 # Generates floating beam
 func SpawnBeam(speed):
 	var enemy = air_beam.instance()
-	enemy.initialize(BEAM_Y, speed)
+	enemy.initialize(rand_range(BEAM_Y_HIGH, BEAM_Y_LOW), speed)
 	
 	add_child(enemy)
-	return BEAM_Y
+	return BEAM_Y_HIGH
